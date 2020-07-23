@@ -1,6 +1,6 @@
 package main
 
-import "fc/fconf"
+import "f-conf/fconf"
 
 func main() {
 	fconf.Main()
