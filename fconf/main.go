@@ -1,5 +1,6 @@
 package fconf
 
+
 import (
 	"bufio"
 	"fmt"
