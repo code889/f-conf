@@ -19,11 +19,11 @@ func is_line_ignore(line string) bool {
 	return false
 }
 
-type icf struct {
+type Icf struct {
 	cf map[string]map[string]string
 }
 
-func (i *icf) Load(path string) {
+func (i *Icf) Load(path string) {
 
 	i.cf = make(map[string]map[string]string)
 
@@ -76,13 +76,13 @@ func (i *icf) Load(path string) {
 	}
 }
 
-func (i *icf) Opt(section, option string) string {
+func (i *Icf) Opt(section, option string) string {
 	return i.cf[section][option]
 }
 
 func Main() {
 
-	i := &icf{}
+	i := &Icf{}
 	i.Load("t.ini")
 	fmt.Println(i.Opt("nihao", "xx"))
 }
